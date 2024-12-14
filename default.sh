@@ -14,8 +14,13 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "pytz"
+    "py-cpuinfo"
+    "tzdata"
+    "pandas"
+    "seaborn"
+    "ultralytics-thop"
+    "ultralytics"
 )
 
 NODES=(
@@ -71,6 +76,12 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
+
+# Baixar e configurar o script download-model
+wget https://raw.githubusercontent.com/ashleykleynhans/civitai-downloader/main/download.py
+mv download.py /usr/local/bin/download-model
+chmod +x /usr/local/bin/download-model
+
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
